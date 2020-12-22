@@ -1,0 +1,130 @@
+@font-face {
+    font-family: Arial_Black;
+    src: url(https://eventfinity-production-assets.s3.amazonaws.com/materials/739151/original/Arial-Black.ttf);
+}
+
+@font-face {
+    font-family: Arial_Regular;
+    src: url(https://eventfinity-production-assets.s3.amazonaws.com/materials/739141/original/Arial.ttf);
+}
+
+body {
+    background-color: #1267AE;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    padding: 2%;
+    width: 100vw;
+}
+
+#header {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.header--title {
+    margin-left: 5%;
+    margin-top: -2%;
+}
+
+#lightbulb img {
+    width: 15vw;
+}
+
+#header h1 {
+    font-family: Arial_Black;
+    font-size: 7vw;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#header h3 {
+    font-family: Arial_Black;
+    font-size: 5vw;
+    margin-bottom: 0;
+    margin-top: -2.5%;
+}
+
+#question {
+    font-family: Arial_Regular;
+    font-size: 3.5vw;
+    margin-bottom: 0;
+    margin-top: 3%;
+}
+
+#quiz {
+    font-family: Arial_Regular;
+    font-size: 3.5vw;
+    margin-top: 1%;
+}
+
+.answers--row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: -1%;
+}
+
+.answer--right {
+    background-image: url("https://eventfinity-production-assets.s3.amazonaws.com/materials/739161/original/GreyBarRight_DropShadow.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: -5%;
+    width: 55vw;
+}
+
+.answer--left {
+    background-image: url("https://eventfinity-production-assets.s3.amazonaws.com/materials/739171/original/GreyBarLeft_DropShadow.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -5%;
+    width: 55vw;
+}
+
+.answer--option {
+    font-size: 4vw;
+    padding-left: 12%;
+    margin-top: 7%;
+}
+
+.answer--option span {
+    pointer-events: none;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 3vw;
+    justify-content: space-between;
+    padding-top: 1.25%;
+    padding-right: 5%;
+}
+
+.footer--points {
+    width: 30%;
+}
+
+.footer--qNo {
+    font-family: Arial_Black;
+    font-size: 3.25vw;
+    width: 27%;
+}
+
+.bold {
+    font-family: Arial_Black;
+    margin-right: 2%;
+}
+
+.footer--next {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding-top: 0.75%;
+    width: 27%;
+}
+
+.btn--next img {
+    width: 4.75vw;
+}

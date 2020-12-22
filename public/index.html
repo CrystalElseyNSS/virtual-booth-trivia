@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>S-W Product Trivia</title>
+</head>
+<body>
+
+    <section>
+        <section id="header">
+            <div id="lightbulb">
+                <img src="https://eventfinity-production-assets.s3.amazonaws.com/materials/739131/original/Light-Bulb.png" alt="light bulb" />
+            </div>
+            <div class="header--title">
+                <h1>PRODUCT QUIZ</h1>
+                <h3 id="header--qNo"><h3>
+                <p id="question"></p>
+            </div>
+        </section>
+
+        <section id="quiz">
+            <div class="answers--row">
+                <div id="optionA" class="answer--left" >
+                    <p class="answer--option" data-result="right"><span class="bold">A)</span><span id="answerA"></span></p>
+                </div>
+                <div id="optionB" class="answer--right" >
+                    <p class="answer--option" data-result="wrong"><span class="bold">B)</span><span id="answerB"></span></p>
+                </div>
+            </div>
+            <div class="answers--row">
+                <div id="optionC" class="answer--left" data-result="wrong">
+                    <p class="answer--option" data-result="wrong"><span class="bold">C)</span><span id="answerC"></span></p>
+                </div>
+                <div id="optionD" class="answer--right" data-result="wrong">
+                    <p class="answer--option" data-result="wrong"><span class="bold">D)</span><span id="answerD"></span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footer--points">You have <span id="pointsDiv" class="bold">0</span> points</div>
+            <div id="footer--qNo">1 of 4</div>
+            <div class="footer--next">
+                <div id="nextQ">Next Question</div>
+                <div id="next" class="btn--next">
+                    <img id="btnArrows" src="https://eventfinity-production-assets.s3.amazonaws.com/materials/739121/original/Next-Arrows.png" alt="next question" />
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <script src="main.js"></script> 
+</body>
+</html>
