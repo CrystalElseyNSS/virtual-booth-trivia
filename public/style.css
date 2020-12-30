@@ -67,7 +67,7 @@ body {
     margin-bottom: -1%;
 }
 
-.answer--right {
+.right {
     background-image: url("https://eventfinity-production-assets.s3.amazonaws.com/materials/739161/original/GreyBarRight_DropShadow.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +75,7 @@ body {
     width: 55vw;
 }
 
-.answer--left {
+.left {
     background-image: url("https://eventfinity-production-assets.s3.amazonaws.com/materials/739171/original/GreyBarLeft_DropShadow.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -83,13 +83,13 @@ body {
     width: 55vw;
 }
 
-.answer--option {
+.option {
     font-size: 4vw;
     padding-left: 12%;
     margin-top: 7%;
 }
 
-.answer--option span {
+.option span {
     pointer-events: none;
 }
 
