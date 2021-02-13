@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target": "booth-trivia",
     "public": "public",
     "ignore": [
       "firebase.json",

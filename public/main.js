@@ -11,16 +11,18 @@ let qTwoCorrect
 let qThreeCorrect
 let qFourCorrect
 
+const urlParams = window.location.pathname.split("-")
+const boothToTrim = urlParams[0]
+const booth = boothToTrim.substring(1)
+const attendee = urlParams[1]
+const awarded = booth + 'producttrivia'
 
 // ---------- FETCHES DATA FROM DATABASE ---------->  
 
 function fetchData() {
 
-    // Get quiz data by exhibitor id:
-    const exhibitorId = window.location.pathname.split("/").pop()
-
-    // Fetch data by exhibitor id:
-    return fetch(`https://us-central1-sw-booth-trivia.cloudfunctions.net/getQuizData?exhibitorId=${exhibitorId}`)
+    // Fetch data by booth id:
+    return fetch(`https://us-central1-sw-booth-trivia.cloudfunctions.net/getQuizData?exhibitorId=${booth}`)
         .then(response => response.json())
         .then(function (response) {
             quizData = response
@@ -81,6 +83,21 @@ function runQuiz() {
         }
     }
 
+    const endGame = () => {
+        fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/checkPathStatusFromGame?attendee=${attendee}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log("data: " + data)
+                if ( data === false ) {
+                    qDiv.innerHTML = "You are not yet eligible to earn points. Visit the leaderboard to view game rules!"
+                } else if (data === true) {
+                    qDiv.innerHTML = `Your points have been added! Visit the leaderboard to see your new score!`
+                    return fetch(`https://us-central1-sw-leaderboard.cloudfunctions.net/addPoints?points=${points}&attendee=${attendee}&awarded=${awarded}`)
+                    .then(response => response.json())
+                }
+            })
+    }  
+
     // Sets, clears, and renders multiple choice answers:
 
     const clearAnswers = () => {
@@ -100,7 +117,6 @@ function runQuiz() {
     answerC.innerText = qOneAnswers[2]
     answerD.innerText = qOneAnswers[3]
     let correctAnswer = qOneCorrect
-    console.log(correctAnswer)
 
     const setAnswers = () => {
         if (qNo === 2) {
@@ -109,21 +125,18 @@ function runQuiz() {
             answerC.innerText = qTwoAnswers[2]
             answerD.innerText = qTwoAnswers[3]
             correctAnswer = qTwoCorrect
-            console.log(correctAnswer)
         } else if (qNo === 3) {
             answerA.innerText = qThreeAnswers[0]
             answerB.innerText = qThreeAnswers[1]
             answerC.innerText = qThreeAnswers[2]
             answerD.innerText = qThreeAnswers[3]
             correctAnswer = qThreeCorrect
-            console.log(correctAnswer)
         } else if (qNo === 4) {
             answerA.innerText = qFourAnswers[0]
             answerB.innerText = qFourAnswers[1]
             answerC.innerText = qFourAnswers[2]
             answerD.innerText = qFourAnswers[3]
             correctAnswer = qFourCorrect
-            console.log(correctAnswer)
         }
     }
 
@@ -160,6 +173,10 @@ function runQuiz() {
                 }
             }
             console.log('Points: ' + points)
+        }
+
+        if (qNo === 4) {
+            endGame()
         }
     })
 }

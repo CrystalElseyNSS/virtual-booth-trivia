@@ -49,9 +49,11 @@ body {
 
 #question {
     font-family: Arial_Regular;
-    font-size: 3.5vw;
+    font-size: 3.4vw;
     margin-bottom: 0;
     margin-top: 3%;
+    width: 97%;
+    word-break: normal;
 }
 
 #quiz {
@@ -71,25 +73,25 @@ body {
     background-image: url("https://eventfinity-production-assets.s3.amazonaws.com/materials/739161/original/GreyBarRight_DropShadow.png");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-right: -5%;
-    width: 55vw;
+    margin-right: -4%;
+    width: 56vw;
 }
 
 .left {
     background-image: url("https://eventfinity-production-assets.s3.amazonaws.com/materials/739171/original/GreyBarLeft_DropShadow.png");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: -5%;
-    width: 55vw;
+    margin-left: -4%;
+    width: 56vw;
 }
 
 .option {
-    font-size: 4vw;
-    padding-left: 12%;
-    margin-top: 7%;
+    padding-left: 9%;
+    margin-top: 8%;
 }
 
 .option span {
+    font-size: 3.3vw;
     pointer-events: none;
 }
 
@@ -114,7 +116,7 @@ body {
 
 .bold {
     font-family: Arial_Black;
-    margin-right: 2%;
+    margin-right: 1%;
 }
 
 .footer--next {

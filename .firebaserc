@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "sw-booth-trivia"
+  },
+  "targets": {
+    "sw-booth-trivia": {
+      "hosting": {
+        "booth-trivia": [
+          "sw-booth-trivia"
+        ]
+      }
+    }
   }
 }
