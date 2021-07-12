@@ -1,6 +1,16 @@
-# Project Info
+# Virtual Trivia Game
 
 > Customizable booth trivia created for exhibitors for a virtual conference
+
+
+## Project Info
+
+Once a quiz has been created using the [Virtual Trivia Form](https://github.com/CrystalElseyNSS/virtual-trivia-form), the Virtual Trivia Game uses Firebase Functions to pull the quiz data from Firebase Cloud Firestore to dynamically populate the quiz, using the Exhibitor Attendee Id as a url parameter. The front-end was built using Vanilla JavaScript, JQuery, HTML, and CSS.
+
+> Test it out live at https://booth-quiz-form.web.app/   
+> View your new quiz at https://sw-booth-trivia.web.app/ + {Exhibitor Attendee Id} 
+
+![](https://eventfinity-production-assets.s3.amazonaws.com/materials/1214041/original/boothquiz.png)
 
 
 ## Languages & Technologies
@@ -12,26 +22,6 @@
     * Cloud Firestore database
     * Firestore Functions
     * Hosting with targets
-
-
-## Trivia Form
-
-Used ReactJS to build a form where data coordinators could enter exhibitors' quiz questions & answers and have the quiz automatically populate in a separate application (the Trivia Quiz). The Trivia Form used Firebase Functions to post the quiz data to Cloud Firestore by exhibitor id.
-
-> Test it out here! https://booth-quiz-form.web.app/
-
-![](https://eventfinity-production-assets.s3.amazonaws.com/materials/1214031/original/boothform.png)
-
-
-
-## The Trivia Quiz
-
-Used JavaScript & JQuery to build the front-end application for the Trivia Quiz. The Trivia Quiz application also used Firebase Functions, to retrieve the quiz data from Cloud Firestore by exhibitor id.
-
-> Find the quiz you created here: https://booth-quiz-form.web.app/[YOUR_EXHIBITOR_ID_HERE]
-
-![](https://eventfinity-production-assets.s3.amazonaws.com/materials/1214041/original/boothquiz.png)
-
 
 
 ## Contact Info
